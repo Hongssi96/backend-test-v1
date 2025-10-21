@@ -16,7 +16,7 @@ allprojects {
     group = "kr.thedream"
     version = "0.0.1-SNAPSHOT"
 
-    java { toolchain { languageVersion = JavaLanguageVersion.of(22) } }
+    java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
 
     kotlin {
         compilerOptions {
@@ -38,6 +38,9 @@ allprojects {
         implementation("com.fasterxml.jackson.core:jackson-databind:2.16.1")
         implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.16.1")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+        // H2
+        runtimeOnly("com.h2database:h2")
 
         // test
         testRuntimeOnly("org.junit.platform:junit-platform-launcher")
