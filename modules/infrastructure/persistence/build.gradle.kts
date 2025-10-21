@@ -10,6 +10,7 @@ dependencies {
     implementation(projects.modules.domain)
     implementation(projects.modules.application)
     implementation(libs.spring.boot.starter.jpa)
+    implementation("org.springframework.boot:spring-boot-starter-web")
     runtimeOnly(libs.database.h2)
     runtimeOnly(libs.database.mariadb)
 
